@@ -20,25 +20,25 @@ fail,
 */
 
 // default
-assert.strictEqual("Accept: */*", reqHeaders.getHeader())
+assert.strictEqual("Accept: */*", reqHeaders.getHeader("Accept"))
 
 // set extension to foobar and assert
 assert.doesNotThrow(reqHeaders.setExtension.bind(null, "foobar"))
-assert.strictEqual("Accept: */*", reqHeaders.getHeader())
+assert.strictEqual("Accept: */*", reqHeaders.getHeader("Accept"))
 
 // set extension to html and assert
 assert.doesNotThrow(reqHeaders.setExtension.bind(null, ".html"))
-assert.strictEqual("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", reqHeaders.getHeader())
+assert.strictEqual("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", reqHeaders.getHeader("Accept"))
 assert.doesNotThrow(reqHeaders.setExtension.bind(null, "htm"))
-assert.strictEqual("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", reqHeaders.getHeader())
+assert.strictEqual("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", reqHeaders.getHeader("Accept"))
 
 // set extension to css and assert
 assert.doesNotThrow(reqHeaders.setExtension.bind(null, "css"))
-assert.strictEqual("Accept: text/css,*/*;q=0.1", reqHeaders.getHeader())
+assert.strictEqual("Accept: text/css,*/*;q=0.1", reqHeaders.getHeader("Accept"))
 
 // set extension to js and assert
 assert.doesNotThrow(reqHeaders.setExtension.bind(null, ".js"))
-assert.strictEqual("Accept: */*", reqHeaders.getHeader())
+assert.strictEqual("Accept: */*", reqHeaders.getHeader("Accept"))
 
 // reqHeaders.Accept.description should contain the text found in lib/Accept/desc.txt
 fs.readFile("lib/Accept/desc.txt", function(err, file) {
