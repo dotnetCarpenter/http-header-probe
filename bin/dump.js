@@ -6,7 +6,7 @@ var url = ""
 var request = require("request")
 require("request-debug")(request)
 // probe and uri
-var util = require("../lib/classes")
+var util = require("../lib/lists")
 
 // add uris
 forEach([url + "/compress/foo.js.gz", url + "/a.txt", url + "/compress/foo.js"], util.uri.add, util.uri)
