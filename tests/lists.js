@@ -35,7 +35,7 @@ assert.deepEqual([], list.probe.clear().probes)
 assert.deepEqual([1,2,3], list.uri.add(1).add(2).add(3).uris)
 // .get
 var get = list.uri.get() // random entry (1 or 2 or 3)
-assert.ok(get === 1 || get === 2 || get === 3)
+assert.ok(get === 1 || get === 2 || get === 3, "should be 1 or 2 or 3 but is " + get)
 // .clear
 assert.deepEqual([1,2,3], list.uri.uris)
 assert.deepEqual([], list.uri.clear().uris)

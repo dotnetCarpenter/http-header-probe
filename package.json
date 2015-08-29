@@ -6,7 +6,7 @@
     "dump": "bin/dump.js"
   },
   "scripts": {
-    "test": "node tests/*.js"
+    "test": "node tests/http-request-headers.js & node tests/lists.js"
   },
   "keywords": [
     "http-headers",
