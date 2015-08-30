@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Command line utility for probing http headers",
   "bin": {
-    "dump": "bin/dump.js"
+    "dump": "bin/dump.js",
+    "gen-test": "bin/generate-test-data.js"
   },
   "scripts": {
     "test": "node tests/http-request-headers.js & node tests/lists.js"
