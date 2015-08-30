@@ -115,7 +115,10 @@ types.map(function(type) {
 
 //FIXME: pretty bad
 function done() {
-  console.log("Ran %d assertions", assertionCounter)
+  if(assertionCounter === 57) {
+    console.log("Ran %d assertions", assertionCounter)
+    process.exit(0)
+  }
 }
 
 function getEnumKeys(enumeration, enumvalue) {

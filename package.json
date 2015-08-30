@@ -7,7 +7,7 @@
     "gen-test": "bin/generate-test-data.js"
   },
   "scripts": {
-    "test": "node tests/http-request-headers.js & node tests/lists.js"
+    "test": "node tests/lists.js & node tests/http-request-headers.js"
   },
   "keywords": [
     "http-headers",
