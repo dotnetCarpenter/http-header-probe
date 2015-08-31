@@ -113,14 +113,6 @@ types.map(function(type) {
   testRequestHeaderDescription(header.type)
 })
 
-//FIXME: pretty bad
-function done() {
-  if(assertionCounter === 57) {
-    console.log("Ran %d assertions", assertionCounter)
-    process.exit(0)
-  }
-}
-
 function getEnumKeys(enumeration, enumvalue) {
   return Object.keys(enumeration).filter(function(key) {
     return enumvalue === enumeration[key]
@@ -154,6 +146,14 @@ function format(str) {
     //console.log("replacing with %s: %s", substitute, str)
   })
   return str
+}
+
+//FIXME: pretty bad
+function done() {
+  if(assertionCounter === 57) {
+    console.log("Ran %d assertions", assertionCounter)
+    process.exit(0)
+  }
 }
 
 // test("GET request-headers should return an Accept request header based on the file extension", function(t) {
